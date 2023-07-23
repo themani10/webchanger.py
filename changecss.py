@@ -7,7 +7,7 @@ def test(a):
     return str(b)+'rem'
 
 
-myRe=re.compile('(\d{0,4})(px)')
+myRe=re.compile(r'(\d{0,4})(px)')
 sub=myRe.sub(test, css)
 print(sub)
 
