@@ -1,10 +1,23 @@
 #convert all px values to rem or other values
 
 import re
-
+css = """ """
 def test(a):
     b=float(a[1])*0.062 #multiplies 0.062 by value in group 1
     return str(b)+'rem'
+
+
+myRe=re.compile(r'(\d{0,4})(px)')
+sub=myRe.sub(test, css)
+print(sub)
+
+#convert all rem values to px or other values
+
+import re
+css = """ """
+def test(a):
+    b=float(a[1])/0.062 #divides 0.062 by value in group 1
+    return str(b)+'px'
 
 
 myRe=re.compile(r'(\d{0,4})(px)')
